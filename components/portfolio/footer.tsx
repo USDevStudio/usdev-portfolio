@@ -18,7 +18,7 @@ export function Footer() {
     <footer className="relative border-t border-border px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
         <div>
-          <a>  
+          <a href="#home" className="font-serif text-xl tracking-tight">
             US.dev<span className="text-gold">.</span>
           </a>
   
