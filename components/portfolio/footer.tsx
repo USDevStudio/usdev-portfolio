@@ -1,8 +1,16 @@
 const socials = [
-  { label: 'Twitter', href: '#' },
-  { label: 'Dribbble', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Instagram', href: '#' },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/USDevStudio',
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ubaid-ur-rehman-885b1a419/',
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/ubaid_ur5/',
+  },
 ]
 
 export function Footer() {
@@ -10,9 +18,10 @@ export function Footer() {
     <footer className="relative border-t border-border px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
         <div>
-          <a href="#home" className="font-serif text-xl tracking-tight">
-            Ubaid<span className="text-gold">.</span>
+          <a> href="#home" className="font-serif text-xl tracking-tight"
+            US.dev<span className="text-gold">.</span>
           </a>
+  
           <p className="mt-2 text-sm text-muted-foreground">
             Designing premium digital experiences.
           </p>
@@ -21,12 +30,14 @@ export function Footer() {
         <ul className="flex flex-wrap items-center justify-center gap-6">
           {socials.map((social) => (
             <li key={social.label}>
-              <a
+            <a
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-muted-foreground transition-colors hover:text-gold"
-              >
-                {social.label}
-              </a>
+           >
+              {social.label}
+            </a>
             </li>
           ))}
         </ul>
