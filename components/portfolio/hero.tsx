@@ -44,23 +44,33 @@ export function Hero() {
           className="glass mx-auto mb-8 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.25em] text-muted-foreground"
         >
           <Sparkles className="h-3.5 w-3.5 text-gold" />
-          Premium Digital Design Studio
+          Building Premium Websites That Grow Businesses
         </motion.span>
 
         <motion.h1
            variants={item}
            className="font-serif text-4xl leading-[1.05] tracking-tight text-balance sm:text-6xl lg:text-7xl"
         >
-          Ubaid <span className="text-gradient">Studio</span>
+          Ubaid <span className="text-gradient">Ur Rehman </span>
+          <span className="text-gradient">
+
+             - Full Stack Web Developer
+          </span>
         </motion.h1>
 
         <motion.p
           variants={item}
           className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground text-pretty sm:text-lg"
         >
-          I create premium business websites and immersive 3D web experiences
-          that help ambitious brands stand out.
+          I build modern, responsive websites using Next.js, React, and TypeScript,
+helping businesses establish a powerful online presence.
         </motion.p>
+        <motion.p
+  variants={item}
+  className="mt-5 text-sm font-medium tracking-wide text-gold"
+>
+  Next.js • React • TypeScript • Tailwind CSS
+</motion.p>
 
         <motion.div
           variants={item}
@@ -70,14 +80,14 @@ export function Hero() {
             href="#work"
             className="group inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-gold-foreground transition-transform hover:scale-[1.03]"
           >
-            View Portfolio
+            View My Work
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#contact"
             className="glass inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:text-gold"
           >
-            Contact Me
+            Hire Me
           </a>
         </motion.div>
       </motion.div>

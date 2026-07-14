@@ -1,20 +1,10 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'motion/react'
-import { Mail, MapPin, Send, Check } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 
 export function Contact() {
-  const [sent, setSent] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 3500)
-  }
-
-  return (
-    <section id="contact" className="relative px-6 py-28">
+  return (  <section id="contact" className="relative px-6 py-28">
       <div
         aria-hidden
         className="absolute left-1/2 top-1/2 -z-10 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 blur-[130px]"
@@ -31,12 +21,12 @@ export function Contact() {
             Contact
           </span>
           <h2 className="mt-4 font-serif text-4xl leading-tight tracking-tight text-balance sm:text-5xl">
-            Let&apos;s build something{' '}
-            <span className="text-gradient">premium</span>.
+            Let&apos;s Bring Your Vision to Life
+            <span className="text-gradient"></span>.
           </h2>
           <p className="mt-6 max-w-md leading-relaxed text-muted-foreground text-pretty">
-            Have a project in mind? Tell me about your brand and vision — I reply
-            to every serious inquiry within 24 hours.
+            Have an idea, business, or startup? I'd love to help you build a modern,
+            high-performance website that stands out. Let's discuss your project.
           </p>
 
           <div className="mt-10 space-y-4">
@@ -59,93 +49,31 @@ export function Contact() {
             </div>
           </div>
         </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 24 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: '-100px' }}
+  transition={{ duration: 0.6, delay: 0.1 }}
+  className="glass rounded-3xl p-8"
+>
+  <h3 className="font-serif text-2xl">
+    Let's Connect
+  </h3>
 
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="glass flex flex-col gap-5 rounded-3xl p-7 sm:p-8"
-        >
-          <div className="grid gap-5 sm:grid-cols-2">
-            <Field label="Name" htmlFor="name">
-              <input
-                id="name"
-                name="name"
-                required
-                placeholder="Your name"
-                className="w-full rounded-xl border border-border bg-background/50 px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold/60"
-              />
-            </Field>
-            <Field label="Email" htmlFor="email">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                placeholder="you@email.com"
-                className="w-full rounded-xl border border-border bg-background/50 px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold/60"
-              />
-            </Field>
-          </div>
-          <Field label="Project" htmlFor="project">
-            <input
-              id="project"
-              name="project"
-              placeholder="What are you building?"
-              className="w-full rounded-xl border border-border bg-background/50 px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold/60"
-            />
-          </Field>
-          <Field label="Message" htmlFor="message">
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows={4}
-              placeholder="Tell me about your vision..."
-              className="w-full resize-none rounded-xl border border-border bg-background/50 px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold/60"
-            />
-          </Field>
+  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+    Interested in working together? Feel free to reach out through my social
+    platforms or email. I'd love to discuss your next project.
+  </p>
 
-          <button
-            type="submit"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3.5 text-sm font-medium text-gold-foreground transition-transform hover:scale-[1.02] disabled:opacity-70"
-            disabled={sent}
-          >
-            {sent ? (
-              <>
-                <Check className="h-4 w-4" />
-                Message Sent
-              </>
-            ) : (
-              <>
-                <Send className="h-4 w-4" />
-                Send Message
-              </>
-            )}
-          </button>
-        </motion.form>
+  <a
+    href="mailto:shafiqubaid4@gmail.com"
+    className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gold px-6 py-3 text-sm font-medium text-gold-foreground transition-transform hover:scale-[1.02]"
+  >
+    <Mail className="h-4 w-4" />
+    Send Email
+  </a>
+</motion.div>
       </div>
     </section>
-  )
-}
-
-function Field({
-  label,
-  htmlFor,
-  children,
-}: {
-  label: string
-  htmlFor: string
-  children: React.ReactNode
-}) {
-  return (
-    <label htmlFor={htmlFor} className="flex flex-col gap-2">
-      <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">
-        {label}
-      </span>
-      {children}
-    </label>
   )
 }

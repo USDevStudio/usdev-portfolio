@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const links = [
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
+  { label: 'Projects', href: '#work' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -37,12 +37,15 @@ export function Navbar() {
         }`}
         style={{ marginInline: '1rem' }}
       >
-        <a
-          href="#home"
-          className="font-serif text-xl tracking-tight text-foreground"
-        >
-          US.dev<span className="text-gold">.</span>
-        </a>
+        <a href="#home" className="flex items-center">
+  <Image
+    src="/logo/usdevstudio-logo.png"
+    alt="USDevStudio"
+    width={220}
+    height={65}
+    priority
+  />
+</a>
 
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
@@ -62,7 +65,7 @@ export function Navbar() {
           href="#contact"
           className="hidden rounded-full border border-gold/40 px-5 py-2 text-sm text-gold transition-all hover:bg-gold hover:text-gold-foreground md:inline-block"
         >
-          Let&apos;s Talk
+          Let&apos;s Connect
         </a>
 
         <button
@@ -96,7 +99,7 @@ export function Navbar() {
             onClick={() => setOpen(false)}
             className="mt-1 rounded-lg bg-gold px-3 py-2 text-center text-sm text-gold-foreground"
           >
-            Let&apos;s Talk
+            Let&apos;s Connect
           </a>
         </motion.div>
       )}

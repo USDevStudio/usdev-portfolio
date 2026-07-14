@@ -3,10 +3,10 @@
 import { motion } from 'motion/react'
 
 const stats = [
-  { value: '6', label: 'Websites Built' },
-  { value: '3D', label: 'Interactive Projects' },
-  { value: 'AI', label: 'Powered Creations' },
-  { value: '100%', label: 'Passion for Learning' },
+  { value: '7+', label: 'Projects Completed' },
+  { value: '7', label: 'Live Websites' },
+  { value: '4+', label: 'Technologies Used' },
+  { value: '100%', label: 'Responsive Design' },
 ]
 export function About() {
   return (
@@ -19,19 +19,18 @@ export function About() {
           transition={{ duration: 0.7 }}
         >
           <span className="text-xs uppercase tracking-[0.3em] text-gold">
-            About Me
+           Who I Am
           </span>
           <motion.h2
            className="..."
         >
-          INTRODUCTION 
+          Crafting Modern Websites with Creativity & Code 
          </motion.h2>
           <p className="mt-6 leading-relaxed text-muted-foreground text-pretty">
-            I&apos;m Ubaid Ur Rehman, an aspiring AI and Web Developer passionate about building modern websites and immersive 3D digital experiences. I enjoy combining AI tools with coding to create fast, beautiful, and interactive websites.
+            I&apos;m Ubaid Ur Rehman, a passionate Web Developer specializing in Next.js, React, TypeScript, and modern UI design. I build responsive, high-performance websites that combine clean code, engaging user experiences, and premium visual design.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground text-pretty">
-            Every pixel is intentional. Every interaction is considered. The
-            result is work that doesn&apos;t just look premium — it performs.
+            My goal is to help businesses and brands establish a strong online presence through fast, responsive, and visually engaging websites. Every project is built with attention to performance, usability, and long-term quality.
           </p>
         </motion.div>
 

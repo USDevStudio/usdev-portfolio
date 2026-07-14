@@ -16,14 +16,38 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Ubaid Shafiq — Premium Digital Experiences',
+  title: 'Ubaid Ur Rehman | Web Developer | USDevStudio',
+
   description:
-    'Ubaid Shafiq designs premium business websites and immersive 3D web experiences. Award-winning digital design studio.',
-  generator: 'v0.app',
+    'Professional portfolio of Ubaid Ur Rehman, a Web Developer specializing in Next.js, React, TypeScript, and Tailwind CSS. Explore modern, responsive websites and premium digital experiences.',
+
+  keywords: [
+    'Ubaid Ur Rehman',
+    'USDevStudio',
+    'Web Developer',
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Tailwind CSS',
+    'Frontend Developer',
+    'Portfolio',
+    'Pakistan',
+  ],
+
+  authors: [
+    {
+      name: 'Ubaid Ur Rehman',
+    },
+  ],
+
+  creator: 'Ubaid Ur Rehman',
+
   openGraph: {
-    title: 'Ubaid Shafiq — Premium Digital Experiences',
+    title: 'Ubaid Ur Rehman | USDevStudio',
+
     description:
-      'I create premium business websites and immersive 3D web experiences.',
+      'Explore premium business websites, modern UI designs, and interactive web experiences built with Next.js, React, and TypeScript.',
+
     type: 'website',
   },
 }
