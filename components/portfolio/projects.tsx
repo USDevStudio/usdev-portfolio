@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'motion/react'
-import { ArrowUpRight, ExternalLink } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 
 type Project = {
   name: string
@@ -10,6 +10,7 @@ type Project = {
   description: string
   image: string
   accent: string
+  url: string
 }
 
 const projects: Project[] = [
@@ -20,6 +21,7 @@ const projects: Project[] = [
 'A luxury restaurant website featuring elegant animations, premium UI, and a seamless dining reservation experience.',
     image: '/projects/lumiere.png',
     accent: 'var(--gold)',
+    url: "https://lumiere-restaurant-rouge.vercel.app/"
   },
   {
     name: 'GalaxyX',
@@ -28,6 +30,7 @@ const projects: Project[] = [
       'An immersive space-tech platform with interactive 3D galaxies and scroll storytelling.',
     image: '/projects/galaxyx.png',
     accent: 'var(--secondary)',
+    url: "https://galaxyx-website.vercel.app/"
   },
   {
     name: 'Zenith Fitness',
@@ -36,6 +39,7 @@ const projects: Project[] = [
       'A high-energy membership site with dynamic motion and a bold athletic identity.',
     image: '/projects/zenith.png',
     accent: 'var(--primary)',
+    url: "https://zenith-fitness-blue.vercel.app/"
   },
   {
     name: 'Velocity',
@@ -44,6 +48,7 @@ const projects: Project[] = [
       'A luxury supercar configurator with real-time visuals and seamless transitions.',
     image: '/projects/velocity.png',
     accent: 'var(--gold)',
+    url: "https://velocity-automotive-ivory.vercel.app/"
   },
   {
     name: 'Aurelia Grand Hotel',
@@ -52,6 +57,7 @@ const projects: Project[] = [
       'An opulent booking experience for a five-star hotel, dripping in gold and marble.',
     image: '/projects/aurelia.png',
     accent: 'var(--gold)',
+    url: "https://aurelia-grand-hotel-iota.vercel.app/"
   },
   {
     name: 'CHRONOS',
@@ -60,6 +66,7 @@ const projects: Project[] = [
       'A premium timepiece boutique with macro product storytelling and refined detail.',
     image: '/projects/chronos.png',
     accent: 'var(--secondary)',
+    url: "https://chronos-luxury-watches.vercel.app/"
   },
 ]
 
@@ -101,33 +108,30 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </div>
 
       <div className="relative -mt-16 p-7">
-        <h3 className="font-serif text-2xl text-foreground sm:text-3xl">
-          {project.name}
-        </h3>
-        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">
-          {project.description}
-        </p>
+  <h3 className="font-serif text-2xl text-foreground sm:text-3xl">
+    {project.name}
+  </h3>
 
-        <div className="mt-6 flex flex-wrap items-center gap-3">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-medium text-gold-foreground transition-transform hover:scale-[1.04]"
-          >
-            <ExternalLink className="h-4 w-4" />
-            Live Demo
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-gold/50 hover:text-gold"
-          >
-            View Project
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-        </div>
-      </div>
+  <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">
+    {project.description}
+  </p>
+
+  <div className="mt-6">
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-medium text-gold-foreground transition-transform hover:scale-[1.04]"
+    >
+      View Project
+      <ArrowUpRight className="h-4 w-4" />
+    </a>
+  </div>
+</div>
     </motion.article>
   )
 }
+
 
 export function Projects() {
   return (
